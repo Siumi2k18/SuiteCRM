@@ -10,6 +10,7 @@ if (!defined('sugarEntry') || !sugarEntry) {
  * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
  * Copyright (C) 2011 - 2018 SalesAgility Ltd.
  *
+ *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Affero General Public License version 3 as published by the
  * Free Software Foundation with the addition of the following permission added
@@ -62,11 +63,13 @@ $current_language = $GLOBALS['current_language'];
 foreach ($_REQUEST as $key=>$value) {
     switch ($key) {
     
+       
         case "function":
         case "call_back_function":
             $func_name=$value;
             $params1['TREE']['function']=$value;
             break;
+            
             
         default:
             $pssplit=explode('_', $key);
